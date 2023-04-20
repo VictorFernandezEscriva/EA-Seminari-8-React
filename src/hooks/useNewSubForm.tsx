@@ -13,7 +13,12 @@ type FormReducerAction = {
     }
 } | {
     type: "clear"
-}
+}| {
+    type: "change_experience"; 
+    payload: {
+        experience: number;
+    };
+};
 
 const INITIAL_STATE = {
     nick:"",
@@ -21,6 +26,7 @@ const INITIAL_STATE = {
      avatar:"",
     description:"",
     money:0,
+    experience:0,
 }
 
 const formReducer = (state: FromState["inputValues"], action: FormReducerAction) => {
@@ -31,6 +37,12 @@ const formReducer = (state: FromState["inputValues"], action: FormReducerAction)
                 ... state,
                 [inputName]: inputValue
     
+            }
+        case "change_experience":
+            const { experience } = action.payload;
+            return {
+                ...state,
+                experience: experience,
             }
         case "clear":
             return INITIAL_STATE
