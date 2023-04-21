@@ -1,9 +1,3 @@
-# ATENCIÓ!!
-
-> Si voleu agafar aquest repo per fer l'exercici de react, feu un clone dels commits anteriors, ja que vaig penjar el meu treball en aquest repo i no en un altre, disculpeu les mol
-
----
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
